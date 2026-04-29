@@ -1,0 +1,3 @@
+[submodule "parameter-setting"]
+	path = parameter-setting
+	url = https://github.com/iksan62/cvrp-ga-doe.git
