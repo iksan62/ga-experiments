@@ -1,30 +1,101 @@
-# GA-Experiments: Evolutionary Optimization for Vehicle Routing Problems tes
+# Reproducibility Code and Data
+**Initial Population Strategies in Genetic Algorithm for CVRP**
 
-This repository serves as a centralized hub for various experiments and implementations of **Genetic Algorithms (GA)** tailored for the **Vehicle Routing Problem (VRP)**. This project is part of ongoing doctoral research aimed at optimizing evolutionary algorithms through advanced parameter tuning and strategy evaluation.
+## Overview
 
-## Problem Scope
-The experiments in this repository cover multiple VRP variants, including:
-* **CVRP** (Capacitated Vehicle Routing Problem)
-* **Green VRP** (Sustainable routing and fuel consumption optimization)
-* Multi-constrained VRP benchmarks.
+This repository provides the complete implementation, datasets, and analysis scripts required to reproduce the experimental results presented in the study on **initial population strategies in Genetic Algorithms (GA)** for the Capacitated Vehicle Routing Problem (CVRP).
 
-## Experimental Structure
-The project is organized into modular components to systematically analyze the GA lifecycle:
+The repository includes:
 
-1.  **`parameter-setting/`** (Submodule)
-    * **Source Repository:** [cvrp-ga-doe](https://github.com/iksan62/cvrp-ga-doe)
-    * Focuses on parameter tuning using **Multi-phase Design of Experiments (DoE)**.
-    * Investigates the impact of GA parameters on solution quality.
-2.  **`initial-population/`**
-    * Studies on population initialization strategies.
-    * Focus on the impact of initial population quality dan diversity on the performance of GA.
-3.  **`selection-method/`**
-    * Implementation and analysis of selection operators like **Roulette Wheel Selection**.
-    * Evaluation of selection pressure and its effect on convergence.
+- C++ implementations of initialization strategies  
+- Aggregated simulation datasets  
+- Python scripts for statistical analysis  
 
+---
 
-## Getting Started
-This repository utilizes **Git Submodules** to link specific research modules. To clone the entire project including all sub-modules, use:
+## Code Availability
 
-```bash
-git clone --recursive [https://github.com/iksan62/ga-experiments.git](https://github.com/iksan62/ga-experiments.git)
+### C++ Implementation
+
+The following source files implement the initial population generation methods:
+
+- `CANN.cpp` — Constraint-Adaptive Nearest Neighbor  
+- `MKNN.cpp` — Modified k-Nearest Neighbor  
+- `HSIBAL.cpp` — Hybrid Strategy (Balanced)  
+- `HSILOW.cpp` — Hybrid Strategy (Low diversification)  
+- `HSIMIN.cpp` — Hybrid Strategy (Minimal constraint bias)  
+
+All implementations generate feasible solutions respecting CVRP constraints.
+
+---
+
+## Data Availability
+
+The repository includes aggregated results produced from multiple simulation runs:
+
+- `datbest.csv` — Best objective value per generation (per run)  
+- `dat_avg.csv` — Average objective value per generation (per run)  
+- `dat2.csv` — Genetic diversity per generation (per run)  
+- `dat5.csv` — Computation time data  
+
+Supporting file:
+
+- `Benchmark_Data_Reference.txt` — Predefined benchmark configurations  
+- `Statistical test results.zip` — Results of statistical analyses  
+
+---
+
+## Experimental Reproducibility
+
+### Simulation Procedure
+
+To reproduce the simulation results:
+
+1. Select a benchmark instance from `Benchmark_Data_Reference.txt`.  
+2. Copy the corresponding data block into the target C++ file under the initialization section.  
+3. Set the algorithm parameters (e.g., population size, number of generations).  
+4. Compile and execute using a standard C++ compiler (C++14/17 recommended).  
+
+---
+
+### Statistical Analysis
+
+Python scripts are provided to reproduce all analytical results:
+
+- Initial population analysis:  
+  `analysis_initial_best.py`, `analysis_initial_avg.py`,  
+  `analysis_initial_diversity.py`, `analysis_generating_time.py`  
+
+- Final and evolutionary analysis:  
+  `analysis_final_best.py`, `analysis_final_mean.py`,  
+  `analysis_final_diversity.py`, `analysis_evol_time.py`,  
+  `analysis_total_time.py`  
+
+Required Python packages: pandas, numpy, scipy, statsmodels, matplotlib, seaborn
+## Methodological Scope
+
+The experiments evaluate initialization strategies with respect to:
+
+- Initial solution quality (best and mean objective values)  
+- Population diversity  
+- Evolutionary performance  
+- Computational efficiency (initialization, evolution, and total time)  
+
+---
+
+## Requirements
+
+- **Simulation:** C++ compiler (Visual Studio 2022 or equivalent)  
+- **Analysis:** Python ≥ 3.8  
+
+---
+
+## License
+
+This repository is made available under the MIT License for academic and research purposes.
+
+---
+
+## Citation
+
+If you use this repository, please cite the associated publication on **initial population strategies for Genetic Algorithms in CVRP**.
