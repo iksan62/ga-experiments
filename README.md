@@ -71,9 +71,9 @@ Python scripts are provided to reproduce all analytical results:
 
 - Final population analysis:  
   `analysis_final_best.py`, `analysis_final_mean.py`,  
-  `analysis_final_diversity.py`, 
+  `analysis_final_diversity.py` 
 
-  - Computational time analysis:
+- Computational time analysis:  
   `analysis_generating_time.py`, `analysis_evol_time.py`,  
   `analysis_total_time.py`
 
