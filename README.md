@@ -67,12 +67,15 @@ Python scripts are provided to reproduce all analytical results:
 
 - Initial population analysis:  
   `analysis_initial_best.py`, `analysis_initial_avg.py`,  
-  `analysis_initial_diversity.py`, `analysis_generating_time.py`  
+  `analysis_initial_diversity.py`
 
-- Final and evolutionary analysis:  
+- Final population analysis:  
   `analysis_final_best.py`, `analysis_final_mean.py`,  
-  `analysis_final_diversity.py`, `analysis_evol_time.py`,  
-  `analysis_total_time.py`  
+  `analysis_final_diversity.py`, 
+
+  - Computational time analysis:
+  `analysis_generating_time.py`, `analysis_evol_time.py`,  
+  `analysis_total_time.py`
 
 Required Python packages: pandas, numpy, scipy, statsmodels, matplotlib, seaborn
 ## Methodological Scope
