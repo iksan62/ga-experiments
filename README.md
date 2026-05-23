@@ -20,10 +20,10 @@ The repository includes:
 The following source files implement the initial population generation methods:
 
 - `CANN.cpp` — Constraint-Adaptive Nearest Neighbor  
-- `MKNN.cpp` — Modified k-Nearest Neighbor  
-- `HSIBAL.cpp` — Hybrid Strategy (Balanced)  
-- `HSILOW.cpp` — Hybrid Strategy (Low diversification)  
-- `HSIMIN.cpp` — Hybrid Strategy (Minimal constraint bias)  
+- `MKNN.cpp` — Multi k-Nearest Neighbor  
+- `HSIBAL.cpp` — Hybrid Seeding Initialization-Balanced
+- `HSILOW.cpp` — Hybrid Seeding Initialization-Low 
+- `HSIMIN.cpp` — Hybrid Seeding Initialization-Minimal  
 
 All implementations generate feasible solutions respecting CVRP constraints.
 
@@ -56,6 +56,7 @@ To reproduce the simulation results:
 3. Set the algorithm parameters (e.g., population size, number of generations).  
 4. Compile and execute using a standard C++ compiler (C++14/17 recommended).  
 
+Output: The C++ program produces detailed CSV logs (e.g., FoG(CANN)=X-n1001-k43...csv) containing generation-by-generation fitness traces and the best route structures.
 ---
 
 ### Statistical Analysis
@@ -98,4 +99,4 @@ This repository is made available under the MIT License for academic and researc
 
 ## Citation
 
-If you use this repository, please cite the associated publication on **initial population strategies for Genetic Algorithms in CVRP**.
+If you use this repository, please cite the associated publication on **Resolving the Quality-Diversity Trade-Off in Genetic Algorithms: A Multi-K Nearest Neighbor Initialization for the CVRP**.
