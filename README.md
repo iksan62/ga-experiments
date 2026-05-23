@@ -54,9 +54,11 @@ To reproduce the simulation results:
 1. Select a benchmark instance from `Benchmark_Data_Reference.txt`.  
 2. Copy the corresponding data block into the target C++ file under the initialization section.  
 3. Set the algorithm parameters (e.g., population size, number of generations).  
-4. Compile and execute using a standard C++ compiler (C++14/17 recommended).  
+4. Compile and execute using a standard C++ compiler (C++14/17 recommended).
 
-Output: The C++ program produces detailed CSV logs (e.g., FoG(CANN)=X-n1001-k43...csv) containing generation-by-generation fitness traces and the best route structures.
+Output: The C++ program produces detailed CSV logs (e.g., FoG(CANN)=X-n1001-k43...csv) containing generation-by-generation fitness traces and the best route structures.  
+
+
 ---
 
 ### Statistical Analysis
